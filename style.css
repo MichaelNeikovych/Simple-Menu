@@ -23,6 +23,10 @@ body {
     list-style-type: none;
     width: 150px;
     position: relative;
+    border-left: 0.5px solid #bcbcbc;
+}
+.menu_item:first-child {
+    border-left: none;
 }
 .menu_link {
     display: block;
@@ -47,10 +51,19 @@ body {
 .sub_menu_2 {
     display: none;
     position: absolute;
-    left: 150px;
+    left: 148px;
     top: 0;
     padding: 0;
 }
 .sub_menu .menu_item:hover .sub_menu_2 {
     display: block;
+}
+.arrow::after {
+    content: ' ';
+    position: absolute;
+    border: 5px solid;
+    border-color: #fff transparent transparent transparent;
+    top: 15px;
+    right: 10px;
+    z-index: 1;
 }
